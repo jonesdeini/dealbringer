@@ -1,0 +1,11 @@
+services:
+  dealbringer:
+    build: .
+    init: true
+    network_mode: none
+    restart: "no"
+    volumes:
+      - dealbringer-data:/data
+    command: ["run", "fake"]
+volumes:
+  dealbringer-data:
